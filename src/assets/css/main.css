@@ -1,1 +1,52 @@
+/*  ANCHOR FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import "tailwindcss";
+
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+.bayangan {
+    box-shadow:
+        inset 8px 0 15px -10px rgba(48, 48, 48, 0.6),
+        inset -8px 0 15px -10px rgba(48, 48, 48, 0.6),
+        inset 0 8px 10px -10px rgba(48, 48, 48, 0.6),
+        inset 0 -8px 10px -10px rgba(48, 48, 48, 0.6);
+}
+
+.container-image::before,
+.container-image::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+.container-image::before {
+    top: 0px;
+    right: -20px;
+    box-shadow: -20px -20px 0 10px white;
+}
+
+.container-image::after {
+    bottom: -20px;
+    left: 0px;
+    box-shadow: -20px -20px 0 10px white;
+}
+
+.dotted-line {
+    position: relative;
+    width: 2px;
+    /* Ketebalan garis */
+    height: 100%;
+    /* Panjang garis */
+    background: repeating-linear-gradient(to bottom,
+            #000000 0px,
+            #000000 4px,
+            transparent 4px,
+            transparent 8px);
+}

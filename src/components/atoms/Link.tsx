@@ -3,13 +3,13 @@ import { ReactNode } from "react"
 type LinkProps = {
     children: ReactNode
     className?: string
-    href: string
+    to: string
 }
 const Link = (props: LinkProps) => {
-    const { children, className, href } = props
+    const { children, className, to } = props
 
     return (
-        <a href={`${href}`} className={`${className}`}> {children}</a>
+        <Link to={`${to}`} className={`${className}`}> {children}</Link>
     );
 }
 

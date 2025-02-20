@@ -1,11 +1,19 @@
-import Content from "../organisms/Content"
-import Sidebar from "../organisms/Sidebar"
-const Layout = () => {
+import { ReactNode } from "react"
+import ProfileSection from "../organisms/ProfileSection"
+
+type LayoutProps = {
+    children: ReactNode
+}
+
+const Layout = (props: LayoutProps) => {
+    const { children } = props
     return (
-        <main className="h-full grid max-w-screen-2xl grid-cols-[30%_auto] gap-x-52 px-10">
-            <Sidebar></Sidebar>
-            <Content></Content>
-        </main>
+        <div className="layout h-full grid max-w-screen-2xl grid-cols-[40%_auto] gap-10 px-10">
+            <ProfileSection></ProfileSection>
+            <div className="h-full main-content w-full">
+                <main className="h-full">{children}</main>
+            </div>
+        </div>
     )
 }
 

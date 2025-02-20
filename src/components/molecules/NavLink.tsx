@@ -1,12 +1,16 @@
 import Link from "../atoms/Link"
 
-const NavLink = () => {
-    return (
+type NavLinkProps = {
+    className?: string
+}
 
-        <div className="flex flex-col">
-            <Link href="about">ABOUT</Link>
-            <Link href="experience">EXPERIENCE</Link>
-            <Link href="projects">PROJECTS</Link>
+const NavLink = (props: NavLinkProps) => {
+    const { className } = props
+    return (
+        <div className={`flex gap-2 ${className}`}>
+            <Link to="about">ABOUT</Link>
+            <Link to="experience">EXPERIENCE</Link>
+            <Link to="projects">PROJECTS</Link>
         </div>
     )
 }

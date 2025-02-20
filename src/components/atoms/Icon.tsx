@@ -3,12 +3,13 @@ import { ReactNode } from "react"
 type IconProps = {
     children: ReactNode
     to?: string
+    className?: string
 }
 
 const Icon = (props: IconProps) => {
-    const { children, to } = props
+    const { children, className } = props
     return (
-        <button>{children}</button>
+        <span className={`${className}`}>{children}</span>
     )
 }
 

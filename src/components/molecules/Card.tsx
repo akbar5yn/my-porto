@@ -1,4 +1,4 @@
-import { JSX, ReactNode } from "react";
+import { ReactNode } from "react";
 import Icon from "../atoms/Icon";
 
 type CardPros = {

@@ -9,10 +9,10 @@ body {
 
 .bayangan {
     box-shadow:
-        inset 8px 0 15px -10px rgba(48, 48, 48, 0.6),
-        inset -8px 0 15px -10px rgba(48, 48, 48, 0.6),
-        inset 0 8px 10px -10px rgba(48, 48, 48, 0.6),
-        inset 0 -8px 10px -10px rgba(48, 48, 48, 0.6);
+        inset 3px 0 15px -10px rgba(48, 48, 48, 0.6),
+        inset -3px 0 15px -10px rgba(48, 48, 48, 0.6),
+        inset 0 3px 10px -10px rgba(48, 48, 48, 0.6),
+        inset 0 -3px 10px -10px rgba(48, 48, 48, 0.6);
 }
 
 .container-image::before,
@@ -21,7 +21,9 @@ body {
     width: 20px;
     height: 20px;
     position: absolute;
-    border-radius: 50%;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-top-left-radius: 10px;
     pointer-events: none;
     background-color: transparent;
 }
@@ -49,4 +51,52 @@ body {
             #000000 4px,
             transparent 4px,
             transparent 8px);
+}
+
+.embla {
+    overflow: hidden;
+    height: 85%;
+    bottom: 0;
+    background: #F9F8F6;
+}
+
+.embla__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+
+.embla__slide {
+    flex: 0 0 60%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.embla__slide:not(.is-snapped) {
+    opacity: 0.2;
+}
+
+.container-btn::before,
+.container-btn::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-bottom-right-radius: 10px;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+.container-btn::before {
+    bottom: 0px;
+    left: -20px;
+    box-shadow: 4px 10px 0 0px white;
+}
+
+.container-btn::after {
+    right: 1px;
+    bottom: 44px;
+    box-shadow: 10px 4px 0 0px white;
 }

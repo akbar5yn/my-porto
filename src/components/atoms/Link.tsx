@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import { NavLink } from "react-router"
 
 type LinkProps = {
     children: ReactNode
@@ -9,7 +10,11 @@ const Link = (props: LinkProps) => {
     const { children, className, to } = props
 
     return (
-        <Link to={`${to}`} className={`${className}`}> {children}</Link>
+        <NavLink to={`${to}`} key={to} className={({ isActive }) =>
+            `${className}  text-base border px-2 rounded-md transition-all duration-300 font-semibold ${isActive ? 'border bg-black text-white' : 'bg-white'}`
+        }>
+            {children}
+        </NavLink>
     );
 }
 

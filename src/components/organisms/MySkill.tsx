@@ -26,30 +26,30 @@ const MySkill = () => {
                 </div>
                 <div className="flex flex-col gap-2 h-full relative">
                     <Typography variantClass="subtitle" className="items-center flex gap-2" tag="h1">Keterampilan <Icon><IoIosArrowForward /></Icon> Teknis</Typography>
-                    <div className="slider border embla absolute w-full z-20 p-[10px_10px_50px_10px] rounded-xl" ref={emblaRef}>
-                        <div className="list embla__container">
-                            <div className="item embla__slide gap-2">
+                    <div className="slider border embla skill absolute w-full z-20 p-[10px_10px_50px_10px] rounded-xl" ref={emblaRef}>
+                        <div className="list embla__container skill ">
+                            <div className="item embla__slide skill gap-2">
                                 <Card
                                     iconCard={<TbBrandReact className="w-12 h-12 items-center flex justify-center" />}
                                     cardTite="React"
                                     cardDescription="Framework Library"
                                     cardContent="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, molestias." />
                             </div>
-                            <div className="embla__slide">
+                            <div className="embla__slide skill">
                                 <Card
                                     iconCard={<TbBrandReact className="w-12 h-12 items-center flex justify-center" />}
                                     cardTite="React"
                                     cardDescription="Framework Library"
                                     cardContent="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, molestias." />
                             </div>
-                            <div className="embla__slide">
+                            <div className="embla__slide skill">
                                 <Card
                                     iconCard={<TbBrandReact className="w-12 h-12 items-center flex justify-center" />}
                                     cardTite="React"
                                     cardDescription="Framework Library"
                                     cardContent="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, molestias." />
                             </div>
-                            <div className="embla__slide">
+                            <div className="embla__slide skill">
                                 <Card
                                     iconCard={<TbBrandReact className="w-12 h-12 items-center flex justify-center" />}
                                     cardTite="React"

@@ -108,18 +108,18 @@ const ExperienceDeskription = () => {
                     {timelineData.map((data) => (
                         <div className="item embla__slide gap-2 experience" key={data.companyId}>
                             <div className="flex flex-col gap-4" id={data.companyId}>
-                                <div className="flex justify-between shadow-sm border-gray-400 border px-2 py-1 rounded-md">
-                                    <div className="flex items-center">
-                                        <Typography tag="h3" variantClass="subtitle" className="">{data.job}</Typography>
+                                <div className="flex flex-col justify-between px-2 py-1 rounded-md">
+                                    <div className="flex justify-between items-center">
                                         <Typography tag="h3" variantClass="subtitle" className="">{data.company}</Typography>
+                                        <Typography tag="h3" variantClass="subtitle" className="">{data.date}</Typography>
                                     </div>
-                                    <Typography tag="h3" variantClass="subtitle" className="">{data.date}</Typography>
+                                    <Typography tag="p" variantClass="body" className="">{data.job}</Typography>
                                 </div>
                                 <div>
                                     <ul className="data-experience flex flex-col gap-2 pl-10">
                                         {data.desc.map((point) => (
                                             <li className="flex items-start gap-5" key={point}>
-                                                <span>•</span>
+                                                <span className="text-gray-400">•</span>
                                                 <Typography key={point} variantClass="body">{point}</Typography>
                                             </li>
                                         ))}

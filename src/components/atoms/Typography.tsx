@@ -12,7 +12,7 @@ const Typography = (props: TypographyProps) => {
     const typographyClass = {
         title: "text-4xl font-bold",
         subtitle: "text-xl font-semibold",
-        body: "text-base text-gray-400",
+        body: "text-base text-gray-500",
     };
     return (
         <Tag className={`${typographyClass[variantClass]} ${className}`}>{children}</Tag>

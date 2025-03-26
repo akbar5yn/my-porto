@@ -2,7 +2,6 @@ import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import useEmblaCarousel from "embla-carousel-react";
 import Typography from "../atoms/Typography"
-import Nav from "../molecules/Nav";
 import ClassNames from "embla-carousel-class-names";
 import { useCallback, useEffect, useRef } from "react";
 
@@ -56,37 +55,32 @@ const timelineData: interfaceTimelineData[] = [
         ]
     },
 ]
-const navCompany: { label: string; to: string }[] = timelineData.map((item) => ({
-    label: item.companyId,
-    to: `#${item.companyId}`
-}))
-
 
 const ExperienceDeskription = () => {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ axis: 'y', loop: false, watchDrag: true, align: "center" }, [ClassNames(),])
-    const itemRefs = useRef<{ [key: string]: number }>({});
+    const [ emblaRef, emblaApi ] = useEmblaCarousel({ axis: 'y', loop: false, watchDrag: true, align: "center" }, [ ClassNames(), ])
+    const itemRefs = useRef<{ [ key: string ]: number }>({});
 
     useEffect(() => {
         if (!emblaApi) return;
 
         // Inisialisasi ulang itemRefs saat Embla API sudah siap
         timelineData.forEach((data, index) => {
-            itemRefs.current[data.companyId] = index;
+            itemRefs.current[ data.companyId ] = index;
         });
 
         console.log("Embla API siap, itemRefs:", itemRefs.current);
-    }, [emblaApi, timelineData])
+    }, [ emblaApi, timelineData ])
 
 
     const scrollToItem = useCallback(
         (companyId: string) => {
-            if (emblaApi && itemRefs.current[companyId] !== undefined) {
-                const targetIndex = itemRefs.current[companyId];
+            if (emblaApi && itemRefs.current[ companyId ] !== undefined) {
+                const targetIndex = itemRefs.current[ companyId ];
 
                 emblaApi.scrollTo(targetIndex, true); // Smooth scroll
             }
         },
-        [emblaApi]
+        [ emblaApi ]
     );
 
     return (

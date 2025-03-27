@@ -3,7 +3,7 @@ import Layout from "../components/templates/Layout"
 
 const Experience = () => {
     return (
-        <main className='md:h-screen flex items-center justify-center py-20'>
+        <main className='lg:h-screen flex items-center justify-center py-20'>
             <Layout>
                 <div className="flex flex-col h-full gap-5 snap-x">
                     <ExperienceDeskription></ExperienceDeskription>

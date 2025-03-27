@@ -28,81 +28,82 @@ const stackData: interfaceStackData[] = [
         iconCard: <PiGearSixBold className="w-8 h-8 lg:w-12 lg:h-12 items-center flex justify-center" />,
         cardTitle: "Agile",
         cardDescription: "Software Development Methodology",
-        cardContent: "Berpengalaman dalam menerapkan metode Agile, termasuk Scrum dan Kanban, dalam pengelolaan proyek pengembangan perangkat lunak."
+        cardContent: "Experienced in implementing Agile methodologies, including Scrum and Kanban, for efficient project management in software development."
     },
     {
         iconCard: <TbBrandTailwind className="w-8 h-8 lg:w-12 lg:h-12 items-center flex justify-center" />,
         cardTitle: "Tailwind CSS",
         cardDescription: "Utility-First CSS Framework",
-        cardContent: "Menggunakan Tailwind CSS untuk membangun UI yang responsif dan modern dalam proyek berbasis React dan Vue."
+        cardContent: "Utilizing Tailwind CSS to build responsive and modern user interfaces in React and Vue-based projects."
     },
     {
         iconCard: <FaVuejs className="w-8 h-8 lg:w-12 lg:h-12 items-center flex justify-center" />,
         cardTitle: "Vue.js",
         cardDescription: "Progressive Frontend Framework",
-        cardContent: "Membangun aplikasi frontend interaktif menggunakan Vue.js, Vuex untuk state management, dan Vue Router untuk navigasi."
+        cardContent: "Developing interactive frontend applications using Vue.js, with Vuex for state management and Vue Router for navigation."
     },
     {
         iconCard: <TbBrandReact className="w-8 h-8 lg:w-12 lg:h-12 items-center flex justify-center" />,
         cardTitle: "React",
         cardDescription: "JavaScript UI Library",
-        cardContent: "Berpengalaman dalam membangun aplikasi React dengan Hooks, Context API, Redux, dan integrasi API menggunakan Axios atau Fetch."
+        cardContent: "Proficient in building React applications using Hooks, Context API, Redux, and API integration with Axios or Fetch."
     },
     {
         iconCard: <TbBrandLaravel className="w-8 h-8 lg:w-12 lg:h-12 items-center flex justify-center" />,
         cardTitle: "Laravel",
         cardDescription: "PHP Backend Framework",
-        cardContent: "Mengembangkan aplikasi backend dengan Laravel, termasuk implementasi REST API, autentikasi, dan ORM menggunakan Eloquent."
+        cardContent: "Developing backend applications with Laravel, including REST API implementation, authentication, and ORM using Eloquent."
     },
     {
         iconCard: <RiNodejsLine className="w-8 h-8 lg:w-12 lg:h-12 items-center flex justify-center" />,
         cardTitle: "Express.js",
         cardDescription: "Minimalist Node.js Framework",
-        cardContent: "Membangun API menggunakan Express.js dengan MongoDB atau MySQL, serta menerapkan middleware untuk otentikasi dan logging."
+        cardContent: "Building APIs with Express.js using MongoDB or MySQL, and implementing middleware for authentication and logging."
     },
     {
         iconCard: <SiMysql className="w-8 h-8 lg:w-12 lg:h-12 items-center flex justify-center" />,
         cardTitle: "MySQL",
         cardDescription: "Relational Database System",
-        cardContent: "Menggunakan MySQL untuk mengelola database dengan skema relasional, optimasi query, dan integrasi dengan backend."
+        cardContent: "Managing relational databases with MySQL, optimizing queries, and integrating databases with backend services."
     },
     {
         iconCard: <SiMongodb className="w-8 h-8 lg:w-12 lg:h-12 items-center flex justify-center" />,
         cardTitle: "MongoDB",
         cardDescription: "NoSQL Database",
-        cardContent: "Berpengalaman dalam desain database NoSQL menggunakan MongoDB, termasuk agregasi data dan indexing untuk optimasi performa."
+        cardContent: "Experienced in designing NoSQL databases with MongoDB, including data aggregation and performance optimization with indexing."
     },
     {
         iconCard: <BiLogoPostgresql className="w-8 h-8 lg:w-12 lg:h-12 items-center flex justify-center" />,
         cardTitle: "PostgreSQL",
         cardDescription: "Advanced Relational Database",
-        cardContent: "Menggunakan PostgreSQL dengan fitur seperti JSONB, indexing, dan transaksi ACID untuk aplikasi skala besar."
+        cardContent: "Working with PostgreSQL features such as JSONB, indexing, and ACID transactions for scalable applications."
     },
     {
         iconCard: <SiRefinedgithub className="w-8 h-8 lg:w-12 lg:h-12 items-center flex justify-center" />,
         cardTitle: "GitHub",
         cardDescription: "Version Control Platform",
-        cardContent: "Mengelola kode sumber dengan GitHub, menggunakan Git Flow, pull request, dan continuous integration (CI/CD)."
+        cardContent: "Managing source code with GitHub, implementing Git Flow, pull requests, and continuous integration (CI/CD)."
     },
     {
         iconCard: <LiaDocker className="w-8 h-8 lg:w-12 lg:h-12 items-center flex justify-center" />,
         cardTitle: "Docker",
         cardDescription: "Containerization Platform",
-        cardContent: "Mendeploy aplikasi menggunakan Docker, termasuk pembuatan Dockerfile, docker-compose, dan container orchestration."
+        cardContent: "Deploying applications using Docker, including creating Dockerfiles, docker-compose setups, and container orchestration."
     },
     {
         iconCard: <SiClevercloud className="w-8 h-8 lg:w-12 lg:h-12 items-center flex justify-center" />,
         cardTitle: "Vercel",
         cardDescription: "Frontend Deployment Platform",
-        cardContent: "Mendeploy aplikasi frontend berbasis Next.js dan React ke Vercel dengan konfigurasi otomatis untuk optimasi performa."
+        cardContent: "Deploying Next.js and React-based applications on Vercel with automatic configuration for performance optimization."
     },
     {
         iconCard: <SiNetlify className="w-8 h-8 lg:w-12 lg:h-12 items-center flex justify-center" />,
         cardTitle: "Netlify",
         cardDescription: "JAMstack Deployment Platform",
-        cardContent: "Menggunakan Netlify untuk hosting proyek berbasis JAMstack, termasuk otomatisasi build dan konfigurasi domain."
+        cardContent: "Using Netlify for hosting JAMstack-based projects, including automated builds and domain configuration."
     }
 ]
+
 
 const MySkill = () => {
     const [ emblaRef, emblaApi ] = useEmblaCarousel({ axis: 'y', loop: false, watchDrag: false, align: "start" }, [ ClassNames(), ])
@@ -114,13 +115,11 @@ const MySkill = () => {
         <section className="h-full">
             <div className="flex flex-col gap-5 h-full">
                 <div className="flex flex-col gap-2 text-justify">
-                    <Typography variantClass="subtitle" className="items-center flex gap-2" tag="h1">Keterampilan <Icon><IoIosArrowForward /></Icon> Non-Teknis</Typography>
-                    <Typography variantClass="body" tag="p">Saya memiliki keterampilan non-teknis seperti komunikasi yang baik, kemampuan bekerja sama dalam tim secara dinamis,
-                        serta pengalaman dalam pengajaran dan mentoring sebagai asisten praktikum untuk mata kuliah Teknologi Web, Teknologi Mobile, dan Pemrograman Web.
-                        Saya juga mampu beradaptasi dengan cepat dalam lingkungan kerja yang dinamis dan berkontribusi secara aktif dalam tim untuk mencapai tujuan bersama. </Typography>
+                    <Typography variantClass="subtitle" className="items-center flex gap-2" tag="h1">Skills <Icon><IoIosArrowForward /></Icon> Non-Technical</Typography>
+                    <Typography variantClass="body" tag="p">I possess strong non-technical skills, including effective communication, the ability to collaborate dynamically within a team, and experience in teaching and mentoring as a lab assistant for Web Technology, Mobile Technology, and Web Programming courses. I am also highly adaptable to dynamic work environments and actively contribute to team efforts to achieve shared goals. </Typography>
                 </div>
                 <div className="flex flex-col gap-2 h-[350px] lg:h-full relative">
-                    <Typography variantClass="subtitle" className="items-center flex gap-2" tag="h1">Keterampilan <Icon><IoIosArrowForward /></Icon> Teknis</Typography>
+                    <Typography variantClass="subtitle" className="items-center flex gap-2" tag="h1">Skills <Icon><IoIosArrowForward /></Icon> Technical</Typography>
                     <div className="slider border embla skill absolute w-full z-20 p-[10px_10px_50px_10px] rounded-xl" ref={emblaRef}>
                         <div className="list embla__container skill ">
                             {stackData.map((skill, index) => (

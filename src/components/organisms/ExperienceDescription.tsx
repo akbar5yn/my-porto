@@ -23,39 +23,28 @@ const timelineData: interfaceTimelineData[] = [
         company: "PT Qatros Teknologi Nusantara",
         date: "Feb 2023 - Jun 2023",
         desc: [
-            "Agile Methodology with Scrum Framework: Berkolaborasi dalam tim dengan menerapkan Agile untuk pengembangan perangkat lunak dan menggunakan Scrum sebagai framework, termasuk melakukan sprint planning, daily standup meetings, dan sprint retrospectives.",
-            "Frontend Development with Vue.js: Mengembangkan antarmuka pengguna dengan Vue.js, termasuk implementasi modul frontend, penghubungan dengan database SQL, serta melakukan testing dan debugging.",
-            "Deployment with Netlify: Mengelola deployment aplikasi menggunakan Netlify untuk memastikan aplikasi dapat diakses secara online dengan performa yang optimal dan tanpa gangguan.",
-            "Soft Skills Development: Mendemonstrasikan kemampuan adaptasi yang cepat dalam lingkungan kerja dinamis dan bersikap profesional."
+            "Agile Methodology with Scrum Framework: Collaborated within a team using Agile methodologies and Scrum framework, including sprint planning, daily standup meetings, and sprint retrospectives.",
+            "Frontend Development with Vue.js: Developed user interfaces with Vue.js, implementing frontend modules, integrating with SQL databases, and performing testing and debugging.",
+            "Deployment with Netlify: Managed application deployment on Netlify to ensure optimal online performance and availability.",
+            "Soft Skills Development: Demonstrated adaptability in a dynamic work environment and maintained a professional attitude."
         ]
     },
     {
         companyId: "Intivada",
         job: "Frontend Developer",
         company: "PT Intivada Teknologi Nusantara",
-        date: "Agu 2023 - Nov 2024",
+        date: "Aug 2023 - Nov 2024",
         desc: [
-            "Mengembangkan aplikasi kwitansi untuk pengelolahan data pasien TKI yang dimana aplikasi dirancang dari nol dengan menggunakan data yang ada sebelumnya.",
-            "Arsitektur sistem yang dipakai untuk pengembangan berupa mircroservice.",
-            "Tech stack yang digunakan untuk mengembangkan aplikasinya berupa Vue.js sebagai framwork frontend untuk mengembangkan halaman interface yang lebih dinamis dan modern.",
-            "Lalu untuk backendnya menggunakan Express.js dan mysql sebagai database manajemennya.",
-            "Mengimplementasikan kolaborasi tim secara efesien untuk mencapai tujuan yang maksimal."
+            "Developed a receipt management application for processing migrant worker patient data, designed from scratch while utilizing existing data.",
+            "Implemented a microservices architecture for system development.",
+            "Utilized Vue.js as the frontend framework to build dynamic and modern user interfaces.",
+            "Developed the backend using Express.js with MySQL as the database management system.",
+            "Effectively collaborated with the team to achieve project goals efficiently."
         ]
     },
-    {
-        companyId: "Intivadaa",
-        job: "Frontend Developer",
-        company: "PT Intivada Teknologi Nusantara",
-        date: "Agu 2023 - Nov 2024",
-        desc: [
-            "Mengembangkan aplikasi kwitansi untuk pengelolahan data pasien TKI yang dimana aplikasi dirancang dari nol dengan menggunakan data yang ada sebelumnya.",
-            "Arsitektur sistem yang dipakai untuk pengembangan berupa mircroservice.",
-            "Tech stack yang digunakan untuk mengembangkan aplikasinya berupa Vue.js sebagai framwork frontend untuk mengembangkan halaman interface yang lebih dinamis dan modern.",
-            "Lalu untuk backendnya menggunakan Express.js dan mysql sebagai database manajemennya.",
-            "Mengimplementasikan kolaborasi tim secara efesien untuk mencapai tujuan yang maksimal."
-        ]
-    },
-]
+
+];
+
 
 const ExperienceDeskription = () => {
     const [ emblaRef, emblaApi ] = useEmblaCarousel({ axis: 'y', loop: false, watchDrag: true, dragFree: true, align: "center" }, [ ClassNames(), ])
@@ -115,9 +104,9 @@ const ExperienceDeskription = () => {
                                 <div>
                                     <ul className="data-experience flex flex-col gap-2 pl-7">
                                         {data.desc.map((point) => (
-                                            <li className="flex items-start gap-5" key={point}>
+                                            <li className="flex gap-5" key={point}>
                                                 <span className="text-gray-400">•</span>
-                                                <Typography key={point} variantClass="body">{point}</Typography>
+                                                <Typography key={point} variantClass="body" className="text-start">{point}</Typography>
                                             </li>
                                         ))}
                                     </ul>

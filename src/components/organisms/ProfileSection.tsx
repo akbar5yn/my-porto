@@ -18,7 +18,7 @@ interface interfaceProfileData {
 const profileData: interfaceProfileData = {
     name: "Akbar Pratama Suryamin",
     job: "Web Developer",
-    description: "Mengembangkan aplikasi web yang responsif dan intuitif dengan teknologi modern untuk pengalaman pengguna yang optimal."
+    description: "Developing responsive and intuitive web applications using modern technologies to deliver an optimal user experience."
 }
 
 

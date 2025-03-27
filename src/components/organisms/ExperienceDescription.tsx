@@ -4,6 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Typography from "../atoms/Typography"
 import ClassNames from "embla-carousel-class-names";
 import { useCallback, useEffect, useRef } from "react";
+import { FiArrowDownCircle, FiArrowUpCircle } from "react-icons/fi";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -57,7 +58,7 @@ const timelineData: interfaceTimelineData[] = [
 ]
 
 const ExperienceDeskription = () => {
-    const [ emblaRef, emblaApi ] = useEmblaCarousel({ axis: 'y', loop: false, watchDrag: true, align: "center" }, [ ClassNames(), ])
+    const [ emblaRef, emblaApi ] = useEmblaCarousel({ axis: 'y', loop: false, watchDrag: true, dragFree: true, align: "center" }, [ ClassNames(), ])
     const itemRefs = useRef<{ [ key: string ]: number }>({});
 
     useEffect(() => {
@@ -68,7 +69,6 @@ const ExperienceDeskription = () => {
             itemRefs.current[ data.companyId ] = index;
         });
 
-        console.log("Embla API siap, itemRefs:", itemRefs.current);
     }, [ emblaApi, timelineData ])
 
 
@@ -82,6 +82,9 @@ const ExperienceDeskription = () => {
         },
         [ emblaApi ]
     );
+
+    const scrollPrev = useCallback(() => { if (emblaApi) emblaApi.scrollPrev() }, [ emblaApi ])
+    const scrollNext = useCallback(() => { if (emblaApi) emblaApi.scrollNext() }, [ emblaApi ])
 
     return (
         <main className="flex flex-col gap-4 text-justify overflow-y-auto">
@@ -97,20 +100,20 @@ const ExperienceDeskription = () => {
                     </button>
                 ))}
             </section>
-            <section className="experience embla overflow-hidden w-full flex flex-col select-none" ref={emblaRef}>
-                <div className="embla__container experience space-y-4 flex flex-col h-full">
+            <section className="experience embla overflow-hidden w-full flex flex-col select-none inset-shadow-gray-300 inset-shadow-sm p-2 rounded-2xl lg:inset-shadow-xs lg:p-0" ref={emblaRef}>
+                <div className="embla__container h-[550px] experience space-y-4 flex flex-col lg:h-full">
                     {timelineData.map((data) => (
                         <div className="item embla__slide gap-2 experience" key={data.companyId}>
                             <div className="flex flex-col gap-4" id={data.companyId}>
                                 <div className="flex flex-col justify-between px-2 py-1 rounded-md">
-                                    <div className="flex justify-between items-center">
+                                    <div className="flex flex-col lg:flex-row justify-between lg:items-center">
                                         <Typography tag="h3" variantClass="subtitle" className="">{data.company}</Typography>
                                         <Typography tag="h3" variantClass="subtitle" className="">{data.date}</Typography>
                                     </div>
                                     <Typography tag="p" variantClass="body" className="">{data.job}</Typography>
                                 </div>
                                 <div>
-                                    <ul className="data-experience flex flex-col gap-2 pl-10">
+                                    <ul className="data-experience flex flex-col gap-2 pl-7">
                                         {data.desc.map((point) => (
                                             <li className="flex items-start gap-5" key={point}>
                                                 <span className="text-gray-400">•</span>
@@ -125,6 +128,11 @@ const ExperienceDeskription = () => {
                     ))}
                 </div>
             </section>
+            <div className="flex gap-2 w-full items-end justify-end">
+                <button className="embla__prev" onClick={scrollPrev}>{<FiArrowUpCircle className="w-7 h-7 " />}
+                </button>
+                <button className="embla__next " onClick={scrollNext}>{<FiArrowDownCircle className="w-7 h-7 " />}</button>
+            </div>
         </main>
     )
 }

@@ -2,7 +2,6 @@ import Icon from "../atoms/Icon"
 import { SiRefinedgithub } from "react-icons/si";
 import { CiLinkedin } from "react-icons/ci";
 import { TiSocialInstagram } from "react-icons/ti";
-import Link from "../atoms/Link";
 
 const SocialIcons = () => {
     return (

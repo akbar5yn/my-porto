@@ -23,10 +23,13 @@ const timelineData: interfaceTimelineData[] = [
         company: "PT Qatros Teknologi Nusantara",
         date: "Feb 2023 - Jun 2023",
         desc: [
-            "Agile Methodology with Scrum Framework: Collaborated within a team using Agile methodologies and Scrum framework, including sprint planning, daily standup meetings, and sprint retrospectives.",
-            "Frontend Development with Vue.js: Developed user interfaces with Vue.js, implementing frontend modules, integrating with SQL databases, and performing testing and debugging.",
-            "Deployment with Netlify: Managed application deployment on Netlify to ensure optimal online performance and availability.",
-            "Soft Skills Development: Demonstrated adaptability in a dynamic work environment and maintained a professional attitude."
+            "Successfully built an interactive web interface using Vue.js and Nuxt.js with the Options API approach.",
+            "Collaborated within a cross-functional team consisting of UI/UX designers, Backend Engineers, and QA.",
+            "Actively involved in the development of Opibox, a visual-based opinion and collaboration platform.",
+            "Learned to manage application state using Vuex according to feature requirements.",
+            "Performed frontend-backend integration, including testing and debugging processes.",
+            "Gained experience in Agile workflows with Scrum practices such as sprint planning, daily stand- ups, and retrospectives — enabling a structured team workflow, improved communication, and the ability to deliver tasks iteratively and on time.",
+            "Contributed to increased team efficiency through effective communication and collaboration throughout the project development."
         ]
     },
     {
@@ -35,11 +38,11 @@ const timelineData: interfaceTimelineData[] = [
         company: "PT Intivada Teknologi Nusantara",
         date: "Aug 2023 - Nov 2024",
         desc: [
-            "Developed a receipt management application for processing migrant worker patient data, designed from scratch while utilizing existing data.",
-            "Implemented a microservices architecture for system development.",
-            "Utilized Vue.js as the frontend framework to build dynamic and modern user interfaces.",
-            "Developed the backend using Express.js with MySQL as the database management system.",
-            "Effectively collaborated with the team to achieve project goals efficiently."
+            "Successfully built and launched Klinik Gora, a patient data management system for overseas clinics (migrant workers), from planning to deployment.",
+            "Developed a modern and responsive user interface using Vue.js, and structured a modular backend with Express.js and MySQL.",
+            "Implemented a microservice architecture to enhance scalability and development efficiency.",
+            "Gained hands-on experience managing end-to-end development processes as part of the founding team.",
+            "Directly involved in designing and shaping the technical direction of feature development within a small team.",
         ]
     },
 

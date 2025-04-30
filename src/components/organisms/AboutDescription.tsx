@@ -5,7 +5,8 @@ const AboutDescription = () => {
         <section className="flex flex-col gap-2 text-justify">
             <Typography tag="h1" variantClass="title">About Me</Typography>
             <Typography tag="p" variantClass="body">
-                I am a  <span className="font-bold">Web Developer</span> specializing in modern and responsive web interfaces. By combining intuitive design with optimal user experience, I create visually appealing and highly functional applications. My focus lies in detail-oriented development, performance optimization, and accessibility, ensuring that users enjoy the best possible interaction with the websites and applications I build."
+                Focused on <span className="font-bold">Frontend Development</span> by building modern and responsive web interfaces using Vue.js, React, and Next.js. In addition, I have backend development experience with Express.js and MySQL to ensure reliable system integration. Proficient in Laravel as a PHP framework for full-stack development, enabling me to handle the entire application development workflow. I also prioritize learning emerging technologies to deliver relevant and impactful solutions for users.
+
             </Typography>
 
         </section>

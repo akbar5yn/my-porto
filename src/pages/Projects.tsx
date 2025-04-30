@@ -5,7 +5,7 @@ const Experience = () => {
     return (
         <main className='lg:h-screen flex items-center justify-center py-20'>
             <Layout>
-                <div className="flex flex-col h-full gap-5 snap-x">
+                <div className="flex flex-col h-[700px] overflow-hidden lg:h-full gap-5 snap-x">
                     <AllProjects />
                 </div>
             </Layout>

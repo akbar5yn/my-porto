@@ -133,4 +133,39 @@ body {
     z-index: 0;
 }
 
+/* ANCHOR Embla Corousel project */
+.embla.project {
+    overflow: hidden;
+    height: 100%;
+}
+
+.embla__container.project {
+    gap: 10px;
+    height: 100%;
+}
+
+.embla__slide.project {
+    flex: 0 0 60%;
+    background-color: #000000;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.embla__slide.project:not(.is-snapped) {
+    opacity: 0.2;
+}
+
+.embla__container {
+    scroll-behavior: smooth;
+    /* Pastikan smooth */
+    scroll-snap-type: x mandatory;
+}
+
+.embla__slide.project:not(.is-snapped) {
+    opacity: 0.5;
+}
+
+/* ANCHOR Project img */
+
+
 /* ANCHOR Media Query */

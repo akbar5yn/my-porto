@@ -14,7 +14,7 @@ const projectItem = [
         title: "Laboratorium Management",
         description: "Laboratory Management is an application designed to facilitate the operations of a laboratory, specifically for the Physics study program. The application caters to two primary user roles: students and laboratory staff (laboran). It includes several features aimed at streamlining laboratory management and enhancing efficiency for both user types.",
         badges: [
-            "Laravel", "Tailwind"
+            "Laravel", "Tailwind", "MySQL"
         ]
     },
     {
@@ -22,7 +22,7 @@ const projectItem = [
         title: "Clinic Gora",
         description: "Clinic Gora is a digital application specifically designed to support the administrative needs of clinics, with a focus on managing data for Indonesian Migrant Worker (TKI) patients. This application streamlines the processes of patient registration, medical examination documentation, automated receipt generation, and standardized official form (blanko) printing.",
         badges: [
-            "Laravel", "Tailwind"
+            "Vue 3", "Tailwind"
         ]
     },
 ]
@@ -35,13 +35,13 @@ const AllProjects = () => {
     const scrollNext = useCallback(() => { if (emblaApi) emblaApi.scrollNext() }, [ emblaApi ])
 
     return (
-        <section className="flex min-h-[700px] lg:h-full flex-col gap-2">
+        <section className="flex min-h-full lg:h-full flex-col gap-2">
             <Typography tag="h1" variantClass="title">Projects</Typography>
-            <div className="relative h-full rounded-xl overflow-hidden inset-shadow-sm">
+            <div className="relative h-[600px] rounded-xl overflow-hidden inset-shadow-sm">
                 <div className="slider embla project" ref={emblaRef}>
                     <div className="list embla__container project w-full gap-5 lg:gap-2 grid grid-cols-1 lg:grid-cols-2">
                         {projectItem.map((project, index) => (
-                            <ProjectCard key={index} className="item emnbla__slide project lg:h-[550px]" {...project} />
+                            <ProjectCard key={index} className="item emnbla__slide project h-fit" {...project} />
                         ))}
                     </div>
                 </div>

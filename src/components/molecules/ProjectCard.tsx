@@ -23,7 +23,7 @@ const ProjectCard = ({ title, description, image, badges, className }: ProjectCa
                         ))}
                     </div>
                     <Typography className="!text-xl font-bold">{title}</Typography>
-                    <Typography className="text-sm text-gray-500 line-clamp-3">{description}</Typography>
+                    <Typography className="!text-[12px] text-gray-500 line-clamp-3">{description}</Typography>
                 </div>
                 <NavLink to="/project-detail" className="border rounded-md p-2 text-center">More Detail</NavLink>
 

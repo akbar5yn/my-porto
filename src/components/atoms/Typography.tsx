@@ -10,8 +10,8 @@ type TypographyProps = {
 const Typography = (props: TypographyProps) => {
     const { tag: Tag = "p", variantClass = "body", className = "", children } = props
     const typographyClass = {
-        title: "text-2xl lg:text-4xl font-bold",
-        subtitle: "text-lg lg:text-xl font-semibold",
+        title: "text-2xl lg:text-2xl font-bold",
+        subtitle: "text-lg lg:text-lg font-semibold",
         body: "text-[13px] lg:text-base text-gray-500",
     };
     return (

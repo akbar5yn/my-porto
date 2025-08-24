@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Ekspos port yang digunakan oleh aplikasi
-EXPOSE 3000
+EXPOSE 5173
 
 # Jalankan aplikasi saat kontainer dimulai
 CMD ["npm", "run", "dev"]

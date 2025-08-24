@@ -1,1 +1,171 @@
+/*  ANCHOR FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+.bayangan {
+    box-shadow:
+        inset 3px 0 15px -10px rgba(48, 48, 48, 0.6),
+        inset -3px 0 15px -10px rgba(48, 48, 48, 0.6),
+        inset 0 3px 10px -10px rgba(48, 48, 48, 0.6),
+        inset 0 -3px 10px -10px rgba(48, 48, 48, 0.6);
+}
+
+.container-image::before,
+.container-image::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-top-left-radius: 10px;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+.container-image::before {
+    top: 0px;
+    right: -20px;
+    box-shadow: -20px -20px 0 10px white;
+}
+
+.container-image::after {
+    bottom: -20px;
+    left: 0px;
+    box-shadow: -20px -20px 0 10px white;
+}
+
+.dotted-line {
+    position: relative;
+    width: 2px;
+    /* Ketebalan garis */
+    height: 100%;
+    /* Panjang garis */
+    background: repeating-linear-gradient(to bottom,
+            #000000 0px,
+            #000000 4px,
+            transparent 4px,
+            transparent 8px);
+}
+
+.embla.skill {
+    overflow: hidden;
+    height: 85%;
+    bottom: 0;
+    background: #F9F8F6;
+}
+
+.embla__container.skill {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+
+.embla__slide.skill {
+    flex: 0 0 60%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.embla__slide.skill:not(.is-snapped) {
+    opacity: 0.2;
+}
+
+.embla__container.experience {
+    scroll-behavior: smooth;
+    /* Pastikan smooth */
+    scroll-snap-type: x mandatory;
+}
+
+.embla__slide.experience:not(.is-snapped) {
+    opacity: 0.5;
+}
+
+.container-btn::before,
+.container-btn::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-bottom-right-radius: 10px;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+.container-btn::before {
+    bottom: 0px;
+    left: -20px;
+    box-shadow: 4px 10px 0 0px white;
+}
+
+.container-btn::after {
+    right: 1px;
+    bottom: 44px;
+    box-shadow: 10px 4px 0 0px white;
+}
+
+.data-experience {
+    position: relative;
+    z-index: 50;
+}
+
+.data-experience::after,
+.data-experience::before {
+    content: "";
+    width: 1px;
+    border-radius: 50px;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    background: #a0a0a0;
+    left: 5px;
+    z-index: 0;
+}
+
+/* ANCHOR Embla Corousel project */
+.embla.project {
+    overflow: hidden;
+    height: 100%;
+}
+
+.embla__container.project {
+    gap: 10px;
+    height: 100%;
+}
+
+.embla__slide.project {
+    flex: 0 0 60%;
+    background-color: #000000;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.embla__slide.project:not(.is-snapped) {
+    opacity: 0.2;
+}
+
+.embla__container {
+    scroll-behavior: smooth;
+    /* Pastikan smooth */
+    scroll-snap-type: x mandatory;
+}
+
+.embla__slide.project:not(.is-snapped) {
+    opacity: 0.5;
+}
+
+/* ANCHOR Project img */
+
+
+/* ANCHOR Media Query */

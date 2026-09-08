@@ -11,13 +11,13 @@ export default defineConfig({
   server: {
     host: true,
     strictPort: true,
-    port: 5173,
+    port: 5174,
     allowedHosts: [
       'akbarsyn.my.id',
       'www.akbarsyn.my.id'
     ],
     hmr: {
-      clientPort: 443,
+      clientPort: 5174,
     },
   },
   preview: {

@@ -1,17 +1,19 @@
-import ExperienceDeskription from "../components/organisms/ExperienceDescription"
-import Layout from "../components/templates/Layout"
+import ExperienceDeskription from "../components/organisms/ExperienceDescription";
+import Layout from "../components/templates/Layout";
 
 const Experience = () => {
-    return (
-        <main className='lg:h-screen flex items-center justify-center py-14'>
-            <Layout>
-                <div className="flex flex-col h-full gap-5 snap-x">
-                    <ExperienceDeskription></ExperienceDeskription>
+  return (
+    <main
+      id="page-experience"
+      className="flex w-full items-center justify-center"
+    >
+      <Layout>
+        <div id="experience-content" className="flex flex-col gap-5 snap-x">
+          <ExperienceDeskription></ExperienceDeskription>
+        </div>
+      </Layout>
+    </main>
+  );
+};
 
-                </div>
-            </Layout>
-        </main>
-    )
-}
-
-export default Experience
+export default Experience;

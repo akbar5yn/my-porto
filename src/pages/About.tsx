@@ -1,18 +1,22 @@
-import AboutDescription from "../components/organisms/AboutDescription"
-import MySkill from "../components/organisms/MySkill"
-import Layout from "../components/templates/Layout"
+import AboutDescription from "../components/organisms/AboutDescription";
+import MySkill from "../components/organisms/MySkill";
+import ExperienceDescription from "../components/organisms/ExperienceDescription";
+import AllProjects from "../components/organisms/AllProjects";
+import Layout from "../components/templates/Layout";
 
 const About = () => {
-    return (
-        <main className='lg:h-screen flex items-center justify-center py-14'>
-            <Layout>
-                <div className="flex flex-col h-full gap-5 snap-x">
-                    <AboutDescription></AboutDescription>
-                    <MySkill></MySkill>
-                </div>
-            </Layout>
-        </main>
-    )
-}
+  return (
+    <main id="page-about" className="flex w-full items-center justify-center">
+      <Layout>
+        <div id="about-content" className="flex w-full flex-col gap-10">
+          <AboutDescription />
+          <MySkill />
+          <ExperienceDescription />
+          <AllProjects />
+        </div>
+      </Layout>
+    </main>
+  );
+};
 
-export default About
+export default About;

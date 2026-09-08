@@ -95,8 +95,7 @@ body {
 }
 
 .identity-visual {
-    border: 1px solid var(--color-border);
-    border-radius: 1rem;
+    border-radius: 1rem 0;
     background-color: var(--color-panel);
     background-image:
         linear-gradient(to right, color-mix(in srgb, var(--color-line) 8%, transparent) 1px, transparent 1px),
@@ -339,6 +338,7 @@ body {
     border-bottom-right-radius: 18px;
     box-shadow: 8px 8px 18px color-mix(in srgb, var(--color-line) 7%, transparent);
     z-index: 30;
+    background-color: var(--color-page);
 }
 
 .social-stack::before,
@@ -353,22 +353,20 @@ body {
 
 .social-stack::before {
     position: absolute;
-    top: 0;
+    height: 30px;
+    top: 1px;
     right: -20px;
-    border-top: 1px solid var(--color-border);
-    border-left: 1px solid var(--color-border);
-    border-top-left-radius: 14px;
-    box-shadow: -20px -20px 0 10px var(--color-panel);
+    border-top-left-radius: 18px;
+    box-shadow: -10px -20px 0 10px var(--color-page);
 }
 
 .social-stack::after {
+    height: 30px;
     position: absolute;
-    bottom: -20px;
-    left: 0;
-    border-top: 1px solid var(--color-border);
-    border-left: 1px solid var(--color-border);
-    border-top-left-radius: 14px;
-    box-shadow: -20px -20px 0 10px var(--color-panel);
+    bottom: -30px;
+    left: 1px;
+    border-top-left-radius: 18px;
+    box-shadow: -10px -20px 0 10px var(--color-page);
 }
 
 .social-link {
@@ -487,6 +485,10 @@ body {
     opacity: 0.5;
 }
 
+#skills-carousel-controls {
+    background-color: var(--color-page);
+}
+
 .container-btn::before,
 .container-btn::after {
     content: "";
@@ -501,15 +503,15 @@ body {
 }
 
 .container-btn::before {
-    bottom: 0px;
+    bottom: 1px;
     left: -20px;
-    box-shadow: 4px 10px 0 0px var(--color-surface);
+    box-shadow: 4px 10px 0 0px var(--color-page);
 }
 
 .container-btn::after {
     right: 1px;
     bottom: 44px;
-    box-shadow: 10px 4px 0 0px var(--color-surface);
+    box-shadow: 10px 4px 0 0px var(--color-page);
 }
 
 .data-experience {

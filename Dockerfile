@@ -1,23 +1,16 @@
-# Gunakan image Node.js versi 20
-FROM node:20-alpine
+FROM node:22-bookworm-slim
 
-# Set direktori kerja di dalam kontainer
 WORKDIR /app
 
-# Salin package.json dan package-lock.json
-COPY package*.json ./
+ENV NODE_ENV=production
 
-# Instal dependensi
-RUN npm install
+RUN npm install -g pnpm
 
-# Salin semua file dari repositori
+COPY package.json pnpm-lock.yaml .npmrc pnpm-workspace.yaml ./
+RUN pnpm install --frozen-lockfile
+
 COPY . .
+RUN pnpm run build
 
-# Jalankan perintah build (jika proyek Anda memiliki build step)
-RUN npm run build
-
-# Ekspos port yang digunakan oleh aplikasi
-EXPOSE 5173
-
-# Jalankan aplikasi saat kontainer dimulai
-CMD ["npm", "run", "dev"]
+EXPOSE 9001
+CMD ["sh", "-lc", "pnpm run start"]
